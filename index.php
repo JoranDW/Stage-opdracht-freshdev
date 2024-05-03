@@ -54,7 +54,9 @@
             <th>Voornaam</th>
             <th>achternaam</th>
             <th>Email</th>
-            <th>Adres</th>
+            <th>Postcode</th>
+            <th>Huisnummer</th>
+            <th>Straat naam</th>
             <th>geboortedatum</th>
             <th>Salaris</th>
             <th>Positie</th>
@@ -69,7 +71,9 @@
                 echo "<td>" . $row['firstname'] . "</td>";
                 echo "<td>" . $row['lastname'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['address'] . "</td>";
+                echo "<td>" . $row['postalcode'] . "</td>";
+                echo "<td>" . $row['housenumber'] . "</td>";
+                echo "<td>" . $row['streetname'] . "</td>";
                 echo "<td>" . $row['birthdate'] . "</td>";
                 echo "<td>" . $row['salary'] . "</td>";
                 echo "<td>" . $row['position'] . "</td>";
