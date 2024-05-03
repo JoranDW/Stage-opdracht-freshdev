@@ -52,12 +52,12 @@
         <tr class="table-dark">
             <th>ID</th>
             <th>Voornaam</th>
-            <th>achternaam</th>
+            <th>Achternaam</th>
             <th>Email</th>
             <th>Postcode</th>
             <th>Huisnummer</th>
             <th>Straat naam</th>
-            <th>geboortedatum</th>
+            <th>Geboortedatum</th>
             <th>Salaris</th>
             <th>Positie</th>
             <th>Acties</th>

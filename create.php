@@ -15,17 +15,17 @@
     .logo {
         width: 200px;
         height: auto;
-        display: block;
         margin-left: auto;
         margin-right: auto;
-        padding: 10px 0;
+        padding: 10px;
     }
 
     .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 80vh;
+        height: 90vh;
+
     }
 
     form {
@@ -41,7 +41,7 @@
 <body>
 
 <div class="container">
-    <img src="img/fp-software.svg" alt="Logo" class="logo">
+    <a href="index.php"> <img src="img/fp-software.svg" alt="Logo" class="logo"> </a>
 </div>
 
 <div id="container" class="form-container">
@@ -63,8 +63,18 @@
                    class="form-control">
         </div>
         <div class="mb-3">
-            <label for="adres_id" class="form-label">Adres medewerker:</label>
-            <input type="text" id="adres_id" name="adres" maxlength="50" required="required"
+            <label for="postalcode_id" class="form-label">Postcode medewerker:</label>
+            <input type="text" id="postalcode_id" name="postcode" maxlength="10" required="required"
+                   class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="streetname_id" class="form-label">Straatnaam medewerker:</label>
+            <input type="text" id="streetname_id" name="straatnaam" maxlength="20" required="required"
+                   class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="housenumber_id" class="form-label">Huisnummer medewerker:</label>
+            <input type="text" id="housenumber_id" name="huisnummer" maxlength="5" required="required"
                    class="form-control">
         </div>
         <div class="mb-3">
@@ -78,7 +88,7 @@
                    class="form-control">
         </div>
         <div class="mb-3">
-            <label for="positie_id" class="form-label">Adres medewerker:</label>
+            <label for="positie_id" class="form-label">Positie medewerker:</label>
             <select name="positie" id="positie_id" class="form-control">
                 <option value="Manager">Manager</option>
                 <option value="Medewerker">Medewerker</option>

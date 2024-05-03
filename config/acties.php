@@ -10,7 +10,9 @@ class acties
             $firstname = $_POST['voornaam'];
             $lastname = $_POST['achternaam'];
             $email = $_POST['email'];
-            $address = $_POST['adres'];
+            $postalcode = $_POST['postcode'];
+            $housenumber = $_POST['huisnummer'];
+            $streetname = $_POST['straatnaam'];
             $birthdate = $_POST['geboortedatum'];
             $salary = $_POST['salaris'];
             $position = $_POST['positie'];
@@ -19,7 +21,7 @@ class acties
 
             $db = new DbConfig();
             $db->connect();
-            $sql = "INSERT INTO employee (firstname, lastname, email, address, birthdate, salary, position) VALUES ('$firstname', '$lastname', '$email', '$address', '$birthdate', '$salary', '$position')";
+            $sql = "INSERT INTO employee (firstname, lastname, email, postalcode, housenumber, streetname, birthdate, salary, position) VALUES ('$firstname', '$lastname', '$email', '$postalcode', '$housenumber', '$streetname', '$birthdate', '$salary', '$position')";
             $db->connectie->query($sql);
         }
     }
@@ -41,7 +43,9 @@ class acties
             $firstname = $_POST['voornaam'];
             $lastname = $_POST['achternaam'];
             $email = $_POST['email'];
-            $address = $_POST['adres'];
+            $postalcode = $_POST['postcode'];
+            $housenumber = $_POST['huisnummer'];
+            $streetname = $_POST['straatnaam'];
             $birthdate = $_POST['geboortedatum'];
             $salary = $_POST['salaris'];
             $position = $_POST['positie'];
@@ -50,7 +54,7 @@ class acties
 
             $db = new DbConfig();
             $db->connect();
-            $sql = "UPDATE employee SET firstname='$firstname', lastname='$lastname', email='$email', address='$address', birthdate='$birthdate', salary='$salary', position='$position' WHERE id='$id'";
+            $sql = "UPDATE employee SET firstname='$firstname', lastname='$lastname', email='$email', postalcode='$postalcode', housenumber='$housenumber', streetname='$streetname', birthdate='$birthdate', salary='$salary', position='$position' WHERE id='$id'";
             $db->connectie->query($sql);
         }
     }

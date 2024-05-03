@@ -37,17 +37,17 @@ $row = $result->fetch();
     .logo {
         width: 200px;
         height: auto;
-        display: block;
         margin-left: auto;
         margin-right: auto;
-        padding: 10px 0;
+        padding: 10px;
     }
 
     .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 80vh;
+        height: 90vh;
+
     }
 
     form {
@@ -55,7 +55,7 @@ $row = $result->fetch();
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
     }
 
 </style>
@@ -63,7 +63,7 @@ $row = $result->fetch();
 <body>
 
 <div class="container">
-    <img src="img/fp-software.svg" alt="Logo" class="logo">
+    <a href="index.php"> <img src="img/fp-software.svg" alt="Logo" class="logo"> </a>
 </div>
 
 <div id="container" class="form-container">
@@ -89,9 +89,19 @@ $row = $result->fetch();
                        class="form-control" value="<?php echo $row['email'] ?>">
             </div>
             <div class="mb-3">
-                <label for="adres_id" class="form-label">Adres medewerker:</label>
-                <input type="text" id="adres_id" name="adres" maxlength="50" required="required"
-                       class="form-control" value="<?php echo $row['address'] ?>">
+                <label for="postalcode_id" class="form-label">Postcode medewerker:</label>
+                <input type="text" id="postalcode_id" name="postcode" maxlength="10" required="required"
+                       class="form-control" value="<?php echo $row['postalcode'] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="streetname_id" class="form-label">Straatnaam medewerker:</label>
+                <input type="text" id="streetname_id" name="straatnaam" maxlength="20" required="required"
+                       class="form-control" value="<?php echo $row['streetname'] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="housenumber_id" class="form-label">Huis nummer medewerker:</label>
+                <input type="text" id="housenumber_id" name="huisnummer" maxlength="5" required="required"
+                       class="form-control" value="<?php echo $row['housenumber'] ?>">
             </div>
             <div class="mb-3">
                 <label for="reden_id" class="form-label">Geboortedatum medewerker:</label>
@@ -99,12 +109,12 @@ $row = $result->fetch();
                        class="form-control" value="<?php echo date('Y-m-d', strtotime($row['birthdate'])) ?>">
             </div>
             <div class="mb-3">
-                <label for="salaris" class="form-label">salaris medewerker:</label>
+                <label for="salaris" class="form-label">Salaris medewerker:</label>
                 <input type="number" id="salaris_id" name="salaris" maxlength="12" required="required"
                        class="form-control" value="<?php echo $row['salary'] ?>">
             </div>
             <div class="mb-3">
-                <label for="positie_id" class="form-label">Adres medewerker:</label>
+                <label for="positie_id" class="form-label">Positie medewerker:</label>
                 <select name="positie" id="positie_id" class="form-control">
                     <option value="Manager" <?php if ($row['position'] == "Manager") echo "selected" ?> >
                         Manager
@@ -116,7 +126,7 @@ $row = $result->fetch();
                         Stagiair
                     </option>
             </div>
-            <input type="submit" name="send" value="send" class="btn btn-primary mt-3">
+            <input type="submit" name="send" value="send" class="btn btn-primary mt-3" onclick='return confirm("Heeft u alles goed ingevuld?")'>
         </fieldset>
 
 
